@@ -1,12 +1,12 @@
 FROM python:3.12.9-alpine3.21
 
-RUN apt-get update && apt-get install -y git
+RUN apk update && apk add --no-cache git
 
 WORKDIR /app
 
 COPY requirements.txt .
 
-RUN pip install --no-cache-dir requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 COPY server.py .
 
