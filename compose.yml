@@ -5,7 +5,7 @@ services:
     expose:
       - "6080"
     volumes:
-      - .:/server
+      - .:/app
 
   app2:
     image: first-laba:1.0
@@ -13,7 +13,7 @@ services:
     expose:
       - "6080"
     volumes:
-      - .:/server
+      - .:/app
 
   app3:
     image: first-laba:1.0
@@ -21,7 +21,7 @@ services:
     expose:
       - "6080"
     volumes:
-      - .:/server
+      - .:/app
 
   app4:
     image: first-laba:1.0
@@ -29,13 +29,13 @@ services:
     expose:
       - "6080"
     volumes:
-      - .:/server
+      - .:/app
 
   nginx:
     image: first-laba-nginx:1.0
     container_name: nginx
     ports:
-      - "127.0.0.1:80:80"
+      - "8080:80"
     depends_on:
       - app1
       - app2

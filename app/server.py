@@ -54,6 +54,10 @@ def return_contact():
 def return_group():
     return jsonify(Group(0, "TEST", "LABA", [0, 0, 0]).__dict__)
 
+@app.route('/')
+def hello():
+    return "Hello, World!"
+
 
 # =====================================================CONTACT==========================================================
 @app.route("/api/v1/contact", methods=["PUT"])
@@ -93,5 +97,5 @@ def get_group():
 
 if __name__ == "__main__":
     # we need port 6080
-    app.run(debug=True, port=6080, host="127.0.0.1")
+    app.run(debug=True, port=6080, host="0.0.0.0")
 
