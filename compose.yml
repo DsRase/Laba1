@@ -1,6 +1,6 @@
 services:
   app1:
-    build: ./app
+    image: first-laba:1.0
     container_name: app1
     expose:
       - "6080"
@@ -8,7 +8,7 @@ services:
       - .:/server
 
   app2:
-    build: ./app
+    image: first-laba:1.0
     container_name: app2
     expose:
       - "6080"
@@ -16,7 +16,7 @@ services:
       - .:/server
 
   app3:
-    build: ./app
+    image: first-laba:1.0
     container_name: app3
     expose:
       - "6080"
@@ -24,7 +24,7 @@ services:
       - .:/server
 
   app4:
-    build: ./app
+    image: first-laba:1.0
     container_name: app4
     expose:
       - "6080"
@@ -32,7 +32,7 @@ services:
       - .:/server
 
   nginx:
-    build: ./nginx
+    image: first-laba-nginx:1.0
     container_name: nginx
     ports:
       - "127.0.0.1:80:80"

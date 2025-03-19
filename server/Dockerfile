@@ -1,6 +1,6 @@
 FROM python:3.12.9-alpine3.21
 
-RUN apk update && apk add --no-cache git
+RUN apk update && apk add --no-cache git postgresql gcc musl-dev
 
 WORKDIR /app
 
