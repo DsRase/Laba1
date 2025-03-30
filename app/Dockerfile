@@ -10,6 +10,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY server.py /app/app/server.py
 
-EXPOSE 6080
+EXPOSE 8080
 
 CMD ["sh", "-c", "pwd && echo '========' && ls -l && echo '==========' && ls -l ./app && python ./app/server.py"]

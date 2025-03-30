@@ -97,5 +97,5 @@ def get_group():
 
 if __name__ == "__main__":
     # we need port 6080
-    app.run(debug=True, port=6080, host="0.0.0.0")
+    app.run(debug=True, port=8080, host="0.0.0.0")
 

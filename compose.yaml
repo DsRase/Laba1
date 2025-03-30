@@ -1,41 +1,41 @@
 services:
   app1:
-    image: first-laba:1.0
+    build: ./app
     container_name: app1
     expose:
-      - "6080"
+      - 8080
     volumes:
       - .:/app
 
   app2:
-    image: first-laba:1.0
+    build: ./app
     container_name: app2
     expose:
-      - "6080"
+      - 8080
     volumes:
       - .:/app
 
   app3:
-    image: first-laba:1.0
+    build: ./app
     container_name: app3
     expose:
-      - "6080"
+      - 8080
     volumes:
       - .:/app
 
   app4:
-    image: first-laba:1.0
+    build: ./app
     container_name: app4
     expose:
-      - "6080"
+      - 8080
     volumes:
       - .:/app
 
   nginx:
-    image: first-laba-nginx:1.0
+    build: ./LB
     container_name: nginx
     ports:
-      - "8080:80"
+      - 6080:80
     depends_on:
       - app1
       - app2
